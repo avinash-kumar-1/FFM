@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>
+		</title>
+	</head>
+	<body>
+		{% if messages %}
+		{% for message in messages %}
+			{{ message|safe }}
+		{% endfor %}
+		{% endif %}
+
+
+		<form action="/food_item_delete/" method="POST" enctype="multipart/form-data" >
+		{% csrf_token %}
+		
+		<label>Food_Name : </label><br><br><input type="text" name="food_name"><br><br>
+		<input type="submit" >
+		</form>
+	</body>
+</html>

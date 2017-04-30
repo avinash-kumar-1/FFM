@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>
+		</title>
+	</head>
+	<body>
+		{% if messages %}
+		{% for message in messages %}
+			{{ message|safe }}
+		{% endfor %}
+		{% endif %}
+
+
+		<form action="/waiter_add/" method="POST" enctype="multipart/form-data" >
+		{% csrf_token %}
+
+		<!--<label>ID : </label><br><input type="text" name="waiter_id"><br><br>-->
+		<label>Name : </label><br><input type="text" name="waiter_name"><br><br>
+		<label>Salary : </label><br><input type="text" name="waiter_salary"><br><br>
+		<label>Adress : </label><br><input type="text" name="waiter_aderess"><br><br>
+		<label>Phon : </label><br><input type="text" name="phone_no"><br><br>
+		<input type="submit" >
+		</form>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>deletion</title>
+	 <link rel="stylesheet" href="{% static "css/base.css" %}" /> <!-- CSS -->
+	 <div align="center"><h1 style="font-size:50px">WAITER DELETE AS PER REQUIRMENTS </h1></div>
+</head>
+<body>
+<table>
+<tr>
+		<th>Waiter ID</th>
+		<th>Waiter Name</th>
+		<th>Waiter Salary</th>
+		<th>Waiter Aderess</th>
+		<th>Waiter Phone No</th>
+	</tr>
+
+{% for i in table %}
+	<tr>
+	{% for j in i %}
+		<td>{{j}}</td>
+	{% endfor %}
+	</tr>
+{% endfor %}
+
+</table>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Purchases</title>
+	 <link rel="stylesheet" href="{% static "css/base.css" %}" /> <!-- CSS -->
+	 <div align="center"><h1 style="font-size:50px">PURCHASE ITEMS FOR IN OUR TESRURANT STOCK FROM BATCH</h1></div>
+</head>
+<body>
+
+<table>
+	<tr>
+		<th>Item Name</th>
+		<th>Item Price</th>
+		<th>Item Stock</th>
+		<th>Veg Nonveg</th>
+	</tr>
+{% for i in table %}
+	<tr>
+	{% for j in i %}
+		<td>{{j}}</td>
+	{% endfor %}
+	</tr>
+{% endfor %}
+
+
+</table>
+</body>
+</html>

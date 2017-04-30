@@ -1,0 +1,11 @@
+Name Avinash Kumar
+Roll 14075011
+sem 3rd year
+coumputer science
+IIT BHU 
+                                 project-1
+            In my project fast food management system I used django 1.6.1 version and python 2.76 version,
+            In my project set virtual environnment and start my project on termina used command "python manage.py 
+            runserver" and genrrate a link on terminal "http://127.0.0.1:8000" click to start and i am also used 
+            mysqldb modules in my project 10 function are works genrat profit,show all table from schema and genrat
+            sum of all worker salary and also genrat total bill and total no of customer per month

@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>
+		</title>
+		<link rel="stylesheet" href="{% static "css/Dbms2.css" %}" /> <!-- CSS -->
+	</head>
+	<body>
+		{% if messages %}
+		{% for message in messages %}
+			{{ message|safe }}
+		{% endfor %}
+		{% endif %}
+
+
+		<form action="/chef_add/" method="POST" enctype="multipart/form-data" >
+		{% csrf_token %}
+
+		<!--<label>ID1 : </label><br><input type="text" name="chef_id"><br><br>-->
+		<label>Name1 : </label><br><input type="text" name="chef_name"><br><br>
+		<label>Salary1 : </label><br><input type="text" name="chef_salary"><br><br>
+		<label>Adress1 : </label><br><input type="text" name="chef_adress"><br><br>
+		<label>Phon1 : </label><br><input type="text" name="phone_no"><br><br>
+		<input type="submit" >
+		</form>
+	</body>
+</html>

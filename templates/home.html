@@ -1,0 +1,34 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<div align="center"><h1 style="font-size:50px">FAST FOOD MANAGEMENT SYSTEM</h1></div>
+	<title>Reslurant</title>
+	 <link rel="stylesheet" href="{% static "css/Dbms2.css" %}" /> <!-- CSS -->
+</head>
+<body>
+	<h1> {{title}} </h1>
+	<h2><br><a href="/signup/">SIGNUP</a>
+	<h2><br><a href="/login/">LOGIN </a>
+	<h2><br><a href="/logout/">LOGOUT</a>
+	{% ifequal is_logged_in True %}	
+	<h2><a href = '/show/'> ALL TABLES SHOW</a></h2>
+	<h2><br><a href="/profit/">PROFIT PAGE</a>
+	<h2><br><a href="/customer_frequency/">CUSTOMER FREQUENCY PAGE</a>
+	<h2><br><a href="/food_item_view/">FOOD ITEMS INSERT VIEW PAGE</a>
+	<h2><br><a href="/workers/">WORKERS DETAILS PAGE</a>	
+	<h2><br><a href="/food_item_view1/">FOOD ITEMS DELETION PAGE</a>
+	<h2><br><a href="/purchases_view/">PURCHASES ITEMS PAGE</a>
+	<h2><br><a href="/waiter_view/">NEW WAITER ADD PAGE</a>	
+	<h2><br><a href="/chef_view/">NEW CHEF ADD PAGE PAGE</a>
+	<h2><br><a href="/waiter_delete_view/">WAITER DELETION PAGE</a>	
+	{% endifequal %}	
+
+
+
+</body>
+</html>
+
+
+

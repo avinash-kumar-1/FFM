@@ -1,0 +1,22 @@
+ <!DOCTYPE HTML>
+<html>
+	<head>
+		<title>
+		</title>
+	</head>
+	<body>
+		{% if messages %}
+		{% for message in messages %}
+			{{ message|safe }}
+		{% endfor %}
+		{% endif %}
+
+
+		<form action="/waiter_delete/" method="POST" enctype="multipart/form-data" >
+		{% csrf_token %}
+		
+		<label>Waiter_ID : </label><br><br><input type="text" name="waiter_id"><br><br>
+		<input type="submit" >
+		</form>
+	</body>
+</html>

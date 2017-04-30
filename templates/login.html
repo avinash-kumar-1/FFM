@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>
+		</title>
+		<link rel="stylesheet" href="{% static "css/Dbms2.css" %}" /> <!-- CSS -->
+	</head>
+	<body>
+		{% if messages %}
+		{% for message in messages %}
+			{{ message|safe }}
+		{% endfor %}
+		{% endif %}
+
+
+		<form action="successful_login/" method="POST" enctype="multipart/form-data" >
+		{% csrf_token %}
+		<label><h5>Username : </h5></label><br><input type="text" name="username"><br>
+		<label><h5>Password : </h5></label><br><input type="password" name="password"><br><br>
+		<input type="submit" >
+		</form>
+	</body>
+</html>

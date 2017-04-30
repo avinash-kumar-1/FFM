@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Items</title>
+	 <link rel="stylesheet" href="{% static "css/base.css" %}" /> <!-- CSS -->
+	 <div align="center"><h1 style="font-size:50px">FOOD ITEMS PRESENT IN OUR RESTURANT</h1></div>
+</head>
+<body>
+<table>
+	<tr>
+		<th>Food Name</th>
+		<th>Food Price</th>
+		<th>Food ID</th>
+		<th>Food VAT</th>
+	</tr>
+
+{% for i in table %}
+	<tr>
+	{% for j in i %}
+		<td>{{j}}</td>
+	{% endfor %}
+	</tr>
+{% endfor %}
+</table>
+</body>
+</html>

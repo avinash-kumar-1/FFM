@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>
+		</title>
+		<link rel="stylesheet" href="{% static "css/Dbms2.css" %}" /> <!-- CSS -->
+	</head>
+	<body>
+		{% if messages %}
+		{% for message in messages %}
+			{{ message|safe }}
+		{% endfor %}
+		{% endif %}
+
+
+		<form action="successful_signup/" method="POST" enctype="multipart/form-data" >
+		{% csrf_token %}
+		<label>Name : </label><br><input type="text" name="name"><br><br>
+		<label>Contact No: </label><br><input type="text" name="contact_no"><br><br>
+		<label>User Type (Customer/Manager): </label><br><input type="text" name="user_type"><br><br>
+		<label>Username : </label><br><input type="text" name="username"><br><br>
+		<label>Password : </label><br><input type="password" name="password"><br><br>
+		<label>Re-enter Password : </label><br><input type="password" name="password_re"><br><br>
+		<input type="submit" >
+		</form>
+		<h3><a href="/login/">LOGIN  PAGE </a>
+	</body>
+</html>

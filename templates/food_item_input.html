@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Food Items</title>
+		<h>Food Items</h>
+		<link rel="stylesheet" href="{% static "css/Dbms2.css" %}" /> <!-- CSS -->
+	</head>
+	<body>
+		{% if messages %}
+		{% for message in messages %}
+			{{ message|safe }}
+		{% endfor %}
+		{% endif %}
+
+
+		<form action="/food_item_insert/" method="POST" enctype="multipart/form-data" >
+		{% csrf_token %}
+		
+		<!--<label>Food_id : </label><br><input type="text" name="food_id"><br><br>-->
+		<label>Food_Name : </label><br><input type="text" name="food_name"><br><br>
+		<label>Food_price : </label><br><input type="text" name="food_price"><br><br>
+		<label>Food_Vat : </label><br><input type="text" name="vat_nv"><br><br>
+		<input type="submit" >
+		</form>
+	</body>
+</html>

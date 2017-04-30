@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Profit</title>
+	 <link rel="stylesheet" href="{% static "css/base.css" %}" /> <!-- CSS -->
+	 <div align="center"><h1 style="font-size:50px">TOTALE AMOUNT OF IN ONE MONTH</h1></div>
+</head>
+<body>
+<table>
+	<tr>
+		<th>Food Bill In One Month</th>
+		 
+	</tr>
+
+{% for i in table %}
+	<tr>
+	{% for j in i %}
+		<td>{{j}}</td>
+	{% endfor %}
+	</tr>
+{% endfor %}
+</table>
+<table>
+	<tr>
+		<th>Total Waiter Salary One Month</th>
+		 
+	</tr>
+
+{% for i in table1 %}
+	<tr>
+	{% for j in i %}
+		<td>{{j}}</td>
+	{% endfor %}
+	</tr>
+{% endfor %}
+</table>
+
+<table>
+	<tr>
+		<th>Total Chef Salary One Month</th>
+		 
+	</tr>
+{% for i in table2 %}
+	<tr>
+	{% for j in i %}
+		<td>{{j}}</td>
+	{% endfor %}
+	</tr>
+{% endfor %}
+
+</table>
+<table>
+	<tr>
+		<th>Profit In One Month</th>
+		 
+	</tr>
+<tr><td>{{value3}}</td></tr>
+	
+
+</table>
+</body>
+</html>
